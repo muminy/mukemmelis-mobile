@@ -17,7 +17,7 @@ export default function ({img, firma, is, ilan_id}) {
         style={style.founder}
       />
       <Container alignItems="center">
-        <Text numberOfLines={1} style={style.h3}>{firma}</Text>
+        <Text numberOfLines={2} style={style.h3}>{firma}</Text>
         <Text numberOfLines={2} style={style.p}>{is}</Text>
       </Container>
     </TouchContainer>
@@ -33,6 +33,7 @@ const style = StyleSheet.create({
     marginBottom: 10,
     width: 180,
     paddingVertical: 20,
+    paddingHorizontal: 15,
     marginRight: 15
   },
   padd: {
@@ -49,7 +50,8 @@ const style = StyleSheet.create({
   h3: {
     fontWeight: 'bold',
     fontSize: 18,
-    marginBottom: 5
+    marginBottom: 5,
+    textAlign: 'center'
   },
   remote: {
     color: '#ce3d38',

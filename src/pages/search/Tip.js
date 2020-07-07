@@ -1,9 +1,6 @@
 import React, {useState, useContext} from 'react';
 import {
   StyleSheet,
-  View,
-  TextInput,
-  TouchableOpacity,
   Text,
   FlatList,
 } from 'react-native';
@@ -11,7 +8,6 @@ import Layout from '../../components/Layout';
 import Container from '../../components/Container';
 import PageTitle from '../../components/PageTitle';
 import TouchContainer from '../../components/TouchContainer';
-import {BackHeader} from '../../components/Header';
 import { TipJson } from '../../helpers/FormJson';
 import { AuthContext } from '../../context/AuthContext';
 
@@ -19,7 +15,6 @@ export default function () {
   const { tip, setCTips } = useContext(AuthContext);
   return (
     <Layout disableHeader title="isbul.com">
-      <BackHeader title="Çalışma tipi" />
       <Container style={style.padd}>
         <PageTitle disableTumunugor header="Çalışma tipi" info={tip === '' ? 'Ayarlanmadı' : tip} />
       </Container>

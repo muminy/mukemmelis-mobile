@@ -1,20 +1,13 @@
 import React, {useState, useContext} from 'react';
 import {
   StyleSheet,
-  View,
-  TextInput,
-  TouchableOpacity,
   Text,
   FlatList,
 } from 'react-native';
 import Layout from '../../components/Layout';
 import Container from '../../components/Container';
-import {SettingIcon} from '../../constant/IconList';
 import PageTitle from '../../components/PageTitle';
 import TouchContainer from '../../components/TouchContainer';
-import {BackHeader} from '../../components/Header';
-import Slider from '@react-native-community/slider';
-import { calismaTips } from '../../helpers/Calismatipi';
 import { AuthContext } from '../../context/AuthContext';
 
 export default function () {
@@ -22,7 +15,6 @@ export default function () {
   const [seviyeList, setSeviyeList] = useState(["","Junior","Senior"])
   return (
     <Layout disableHeader title="isbul.com">
-      <BackHeader title="İş seviyesi" />
       <Container style={style.padd}>
         <PageTitle disableTumunugor header="Arana iş tecrübesi" info={seviye === '' ? 'Farketmez' : seviye} />
       </Container>

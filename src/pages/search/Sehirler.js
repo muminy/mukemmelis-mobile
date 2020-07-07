@@ -9,13 +9,12 @@ import Container from '../../components/Container';
 import { SehirlerJson } from '../../helpers/FormJson';
 import PageTitle from '../../components/PageTitle';
 import TouchContainer from '../../components/TouchContainer';
-import {BackHeader} from '../../components/Header';
 import { AuthContext } from '../../context/AuthContext';
+
 export default function () {
   const { asehir, setASehir } = useContext(AuthContext);
   return (
     <Layout disableHeader title="isbul.com">
-      <BackHeader title="Şehir seç" />
       <Container style={style.padd}>
         <PageTitle disableTumunugor header="Şehirler" info={asehir === '' ? 'Ayarlanmadı' : asehir} />
       </Container>

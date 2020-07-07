@@ -11,7 +11,7 @@ export default function () {
   const [ilans, setIlans] = useState([]);
   const [remote, setRemote] = useState([]);
   const [stajyer, setStajyer] = useState([]);
-  const [ft, setFT] = useState([]);
+  const [size, setSize] = useState(5)
   useEffect(() => {
     getIlan().then((responseJson) => setIlans(responseJson));
   }, []);
@@ -19,8 +19,7 @@ export default function () {
   useEffect(() => {
     if(ilans.length > 0){
       setStajyer(ilans.filter(item => item.tip === 'Stajyer'))
-      setFT(ilans.filter(item => item.tip === 'Tam zamanlı'))
-      setRemote(ilans.filter(item => item.tip === 'Uzaktan'))
+      setRemote(ilans.filter(item => item.tip === 'Remote'))
     }
   }, [ilans])
   return (
@@ -33,7 +32,7 @@ export default function () {
               header="Son eklenen ilanlar"
               routeData={{type: '', title: 'Tüm iş ilanları'}}
             />
-            {ilans.map((item, index) => (
+            {ilans.slice(0, size).map((item, index) => (
               <IlanCard
                 key={index}
                 image={`https://firebasestorage.googleapis.com/v0/b/mukemmelis-5d0ef.appspot.com/o/firma%2F${item.slug_image}?alt=media`}
@@ -51,11 +50,12 @@ export default function () {
             <PageTitle
               info={`Toplam ${remote.length} ilan`}
               header="Remote ilanlar"
-              routeData={{type: 'Uzaktan', title: 'Uzaktan iş ilanları'}}
+              routeData={{type: 'Remote', title: 'Uzaktan iş ilanları'}}
             />
             <FlatList
               horizontal
-              data={remote}
+              data={remote.slice(0, size)}
+              showsHorizontalScrollIndicator={false}
               keyExtractor={(_) => _.ilan_id.toString()}
               renderItem={({item, index}) => (
                 <ScrollIlan
@@ -76,7 +76,7 @@ export default function () {
               header="Stajyer ilanları"
               routeData={{type: 'Stajyer', title: 'Stajyer iş ilanları'}}
             />
-            {stajyer.map((item, index) => (
+            {stajyer.slice(0, size).map((item, index) => (
               <IlanCard
                 key={index}
                 image={`https://firebasestorage.googleapis.com/v0/b/mukemmelis-5d0ef.appspot.com/o/firma%2F${item.slug_image}?alt=media`}

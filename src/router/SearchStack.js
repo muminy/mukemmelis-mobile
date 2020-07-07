@@ -28,21 +28,41 @@ export default function ({route}) {
         component={Main}
       />
       <Stack.Screen
+        options={{
+          title: 'Arama Filtresi',
+          headerTitleAlign: 'center',
+          headerStyle: {elevation: 1},
+        }}
         name={PagesRouteName.bottom.search.filter.main}
         component={Filter}
       />
       <Stack.Screen
-        options={{headerShown: false}}
+        options={{
+          title: 'Şehir',
+          headerTitleAlign: 'center',
+          headerStyle: {elevation: 1},
+        }}
+        name={PagesRouteName.bottom.search.filter.main}
         name={PagesRouteName.bottom.search.filter.sehirler}
         component={Sehirler}
       />
       <Stack.Screen
-        options={{headerShown: false}}
+        options={{
+          title: 'Tip',
+          headerTitleAlign: 'center',
+          headerStyle: {elevation: 1},
+        }}
+        name={PagesRouteName.bottom.search.filter.main}
         name={PagesRouteName.bottom.search.filter.tip}
         component={Tip}
       />
       <Stack.Screen
-        options={{headerShown: false}}
+        options={{
+          title: 'İş seviyesi',
+          headerTitleAlign: 'center',
+          headerStyle: {elevation: 1},
+        }}
+        name={PagesRouteName.bottom.search.filter.main}
         name={PagesRouteName.bottom.search.filter.seviye}
         component={Seviye}
       />
