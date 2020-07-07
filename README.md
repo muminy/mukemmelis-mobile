@@ -1,6 +1,6 @@
 ## Mobile screenShots
 
-| (Anasayfa / İlanlar) | (Search / Detail 1)) | (Subscribe / Detail 2) |
+| (İlanlar / Tüm ilanlar) | (İlan arama / İlan bulunamadı) | (Takip / İş detay) |
 | :-------------: |:-------------:| :-------------:|
-| ![Recently Posts](screenshots/anasayfa.jpg) | ![Search](screenshots/search.png) | ![Subscribe](screenshots/subscribe.png) |
-| ![Search Results](screenshots/search-results.png) | ![Post Detail 1](screenshots/detail-1.png) | ![Post Detail 2](screenshots/detail-2.png) |
+| ![İlanlar](screenshots/anasayfa.jpg) | ![İlan arama](screenshots/aramaekrani.jpg) | ![Takip](screenshots/takipler.jpg) |
+| ![Tüm ilanlar](screenshots/tumisler.jpg) | ![İlan bulunamadı](screenshots/not_found.jpg) | ![İş detay](screenshots/ilan_detail.jpg) |
